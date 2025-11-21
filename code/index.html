@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>Flappy Bird</title>
+        <link rel="stylesheet" href="flappybird.css">
+        <script src="flappybird.js"></script>
+    </head>
+    <body>
+        <canvas id="board"></canvas>
+        <!-- Game Over modal -->
+        <div id="gameOverModal" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <h2>Game Over</h2>
+                <p>Score: <span id="finalScore">0</span></p>
+                <div class="modal-buttons">
+                    <button id="restartBtn" type="button">Restart</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
