@@ -112,9 +112,7 @@ function update() {
     velocityY += gravity;
     // bird.y += velocityY;
     bird.y = Math.max(bird.y + velocityY, 0); //apply gravity to current bird.y, limit the bird.y to top of the canvas
-    if (birdImg.complete && birdImg.naturalWidth > 0) {
-        context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
-    }
+    context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
 
     if (bird.y > board.height) {
         gameOver = true;
@@ -124,9 +122,7 @@ function update() {
     for (let i = 0; i < pipeArray.length; i++) {
         let pipe = pipeArray[i];
         pipe.x += velocityX;
-        if (pipe.img && pipe.img.complete && pipe.img.naturalWidth > 0) {
-            context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
-        }
+        context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
 
         if (!pipe.passed && bird.x > pipe.x + pipe.width) {
             score += 0.5; //0.5 because there are 2 pipes! so 0.5*2 = 1, 1 for each set of pipes
