@@ -39,14 +39,17 @@
             <script src="js/flappybird.js"></script>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <canvas id="board"></canvas>
+        <!-- Game Over modal -->
+        <div id="gameOverModal" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <h2>Game Over</h2>
+                <p>Score: <span id="finalScore">0</span></p>
+                <div class="modal-buttons">
+                    <button id="restartBtn" type="button">Restart</button>
+                </div>
             </div>
         </div>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
+    </body>
     </body>
 </html>
